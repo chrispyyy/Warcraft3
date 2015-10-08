@@ -15,12 +15,20 @@ attr_accessor :health_points
   end
 
  def attack!(enemy)
-    enemy.damage(@attack_power)
+    enemy.damage(@attack_power) unless self.dead?
   end
 
   def damage(attack_power)
-   self.health_points -= attack_power
+   self.health_points -= attack_power unless self.dead?
   end
+
+  def dead?
+    self.health_points <= 0
+  end
+
+  # def attack?
+  #   self.health_points >0
+  # end
 
 
 end

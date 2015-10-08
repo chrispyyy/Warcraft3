@@ -13,6 +13,7 @@ attr_accessor :health_points, :attack_power
  
   end
 
+
   # def attack!(enemy)
   #   enemy.damage(@attack_power)
   # end
